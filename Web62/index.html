@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Transition动画</title>
+		<style>
+			.div1
+			{
+				width: 50px;
+				height: 50px;
+				background: lightblue;
+				transition: width 1s;
+			}
+			.div2
+			{
+				width: 50px;
+				height: 50px;
+				background: orangered;
+				transition: width 1s;
+			}
+			img
+			{
+			    width: 50px;
+			    height: 50px;
+				background: aliceblue;
+			}
+			.img1
+			{
+				color: white;
+				line-height: 50px;
+				margin-left: 50px;
+				position: absolute;
+			}
+			.img2
+			{
+				display: inline-block;
+				line-height: 25px;
+			}
+			div:hover
+			{
+				width:150px;
+			}
+			div:hover.img1
+			{
+				display: inline-block;
+			}
+			div:hover.img2
+			{
+				float: right;
+				line-height: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+			<span class="img1">访客Visitor</span>
+			<span class="img2"><img src="访客.png"/></span>
+		</div>
+		<div class="div2">
+			<span class="img1">学生Student</span>
+			<span class="img2"><img src="学生.png"/></span>
+		</div>
+	</body>
+</html>
