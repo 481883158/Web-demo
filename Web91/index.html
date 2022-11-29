@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>网页</title>
+		<script>
+			function openwin1()
+			{
+				mywindow=window.open('','','width=300,height=150,top=100,left=100');
+				mywindow.document.write('<style>body{background: #eccac4;}</style><label for=username>用户名：</label><input type="name" id="username" placeholder="请创建你的用户名..."><br><label for=username>密&nbsp;&nbsp;&nbsp;码：</label><input type="name" id="username" placeholder="请创建你的密码..."><br><input type="button" value="注册"/>');
+				mywindow.focus();
+			}
+			function openwin2()
+			{
+				mywindow=window.open('','','width=300,height=165,top=100,left=500');
+				mywindow.document.write('<style>.box{border-radius: 20px;border: 2px solid #000000;padding: 20px;width: 240px;height: 120px;}</style><div class="box"><p>游客，你好！</p><style>body{background: #ecd8d4;}</style><label for=username>用户名：</label><input type="name" id="username" placeholder="请输入你的用户名..."><br><label for=username>密&nbsp;&nbsp;&nbsp;码：</label><input type="name" id="username" placeholder="请输入你的密码..."><br><input type="button" value="登录"/>');
+				mywindow.focus();
+			}
+		</script>
+	</head>
+	<body>
+		<a href="" onclick="openwin1()">注册</a>|
+		<a href="" onclick="openwin2()">登录</a>
+		<p><small>这是主页面</small></p>
+	</body>
+</html>
