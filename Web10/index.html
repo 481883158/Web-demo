@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>注册验证</title>
+		<script language="javascript">
+		    function checkform()
+			{
+				if(document.login.userid.value == "")
+				{
+		            alert("请输入用户名");
+		            document.login.userid.focus();
+		            return;
+		        }
+		        if(document.login.userkey1.value == "")
+				{
+		            alert("请输入密码");
+		            document.login.userkey1.focus();
+		            return;
+		        }
+				if(document.login.userkey1.value.length<6)
+				{
+					alert("密码至少六位");
+					document.login.userkey1.focus();
+					return;
+				}
+		        if(document.login.userkey1.value != document.login.userkey2.value)
+				{
+		            alert("两个密码不一致");
+		            document.login.userkey1.focus();
+		            return;
+		        }
+				if(document.login.sex.value == "")
+				{
+		            alert("请选择性别");
+		            document.login.sex.focus();
+		            return;
+		        }
+		        alert("验证都已通过");
+		    }
+		</script>
+	</head>
+	<body>
+		<form id="login" name="login">
+		    <table border="1" cellspacing="0" cellpadding="3" width="380">
+		        <tr><td colspan="2" class="td1"><center>用户注册</center></td></tr>
+		        <tr><td width="289" class="td2">用户名：</td>
+		            <td width="295" class="td2"><input type="text" id="userid" placeholder="请输入你的用户名..."/></td>
+		            </tr>
+		        <tr><td class="td2">密码：</td>
+		            <td class="td2"><input type="password" id="userkey1" placeholder="请输入你的密码..."/></td>
+		            </tr>
+		        <tr><td class="td2">重复密码：</td>
+		            <td class="td2"><input type="password" id="userkey2" placeholder="请再次输入你的密码..."/></td>
+		            </tr>
+		        <tr><td class="td2">性别：</td>
+		            <td class="td2"><input type="radio" id="sex" value="radiobutton"/>男
+		            <input type="radio" id="sex" value="radiobutton"/>女</td>
+		            </tr>
+		            <tr><td colspan="2" class="td3"><div align="center">
+		            <input id="Button1" type="button" value="提交" onclick="javascript:checkform()" />
+		            </div></td>
+		            </tr>
+		    </table>
+		</form>
+	</body>
+</html>
